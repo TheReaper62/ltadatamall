@@ -12,7 +12,8 @@ setup(
     keywords=['lta','datamall','bus timing','train','service','passenger volume','taxi'],
     install_requires=[
         'requests',
-        'regex'
+        'aiohttp',
+        'asyncio',
     ],
     classifiers=[
         'Development Status :: 3 - Alpha',
@@ -24,5 +25,4 @@ setup(
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
     ],
-    long_description=open('README.md').read(),
 )

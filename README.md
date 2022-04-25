@@ -7,8 +7,9 @@
 - Easy to Use
 - Open Source
 
-******
+
 ### Setup
+**********
 
 ##### Windows
 ```shell
@@ -21,7 +22,7 @@
 ```
 
 ### Services/Information Provided
-******
+**********************************
 1. Bus Related
     - Bus Arrival
     - Bus Stop
@@ -39,24 +40,20 @@
     - Train Service Alert Messages
 
 ### Simple Usage
-******
-**Asynchronous**
+*****************
+1. Asynchronous
 ```py
 from ltadatamall import BusManager
 import asyncio
-
 async def main():
     client = BusManager('APIKEY')
     fav = await client.async_get_services([3,68])
     print(fav)
 asyncio.run(main())
 ```
-
-
-**Synchronous (Normal)**
+2. Synchronous (Normal)
 ```py
 from ltadatamall import BusManager
-
 client = BusManager('APIKEY')
 fav_timings = client.get_bus_arrival(12345,[3,68])
 print(fav_timings)
