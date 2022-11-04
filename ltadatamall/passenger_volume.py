@@ -3,7 +3,7 @@ from typing import Union, Callable, Any
 from .base import DataFrame
 
 __all__ = (
-    'PassengerVolume'
+    'PassengerVolume',
 )
 
 class PassengerVolume(DataFrame):

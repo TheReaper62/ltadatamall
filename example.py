@@ -1,4 +1,4 @@
-from ltadatamall import BusManager
+from LTADatamall import BusManager
 
 import asyncio
 
@@ -8,4 +8,3 @@ async def main():
     for i in res:
         print(vars(i),"\n\n")
 asyncio.run(main())
-
