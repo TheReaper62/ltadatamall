@@ -1,4 +1,5 @@
 from typing import Union, Callable, Any
+from datetime import datetime
 
 __all__ = (
     'NextBus',
@@ -11,7 +12,7 @@ class NextBus:
         type_map = {"SD":"Single Decker", "DD":"Double Decker", "BD":"Bendy"}
         self.orgin_code = kwargs.get('OrginCode','Not Available')
         self.destination_code = kwargs.get('DestinationCode','Not Available')
-        self.estimated_arrival = kwargs.get('EstimatedArrival','No Estimated Time')
+        self.estimated_arrival = datetime.strptime(kwargs['EstimatedArrival'],r"%Y-%m-%dT%H:%M:%S%z") if kwargs.get('EstimatedArrival','') != '' else 'No Estimated Time'
         self.latitude = kwargs.get('Latitude',0.0)
         self.longitude = kwargs.get('Longitude',0.0)
         self.visit_number = int(kwargs['VisitNumber']) if kwargs.get('VisitNumber','') != '' else 'Not Available'

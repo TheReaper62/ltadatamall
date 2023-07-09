@@ -122,7 +122,7 @@ class BusManager(DataFrame):
 
     # Bus Stops
     def get_stops(self,bus_stop_codes:Union[int,list[int],str,list[str]]) -> list[BusStop]:
-        all_stops = self.async_get_all_stops()
+        all_stops = self.get_all_stops()
 
         # Query single bus stop either as str or int
         if isinstance(bus_stop_codes, int) or isinstance(bus_stop_codes, str):

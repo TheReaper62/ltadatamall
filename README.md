@@ -1,6 +1,6 @@
 ## LTA Datamall API Wrapper (Python)
 > This is an Unoffical Wrapper and this repo has no relation nor endorsement with/from LTA
-
+####v0.0.7
 **Library Features:**
 - Sync/Async
 - Lightweight
@@ -13,12 +13,12 @@
 
 ##### Windows
 ```shell
->>> pip install ltadatamall
+>>> pip install LTADatamall
 ```
 
 ##### MacOS
 ```shell
->>> pip3 install ltadatamall
+>>> pip3 install LTADatamall
 ```
 
 ### Services/Information Provided
@@ -43,7 +43,7 @@
 *****************
 1. Asynchronous
 ```py
-from ltadatamall import BusManager
+from LTADatamall import BusManager
 import asyncio
 async def main():
     client = BusManager('APIKEY')
@@ -53,7 +53,7 @@ asyncio.run(main())
 ```
 2. Synchronous (Normal)
 ```py
-from ltadatamall import BusManager
+from LTADatamall import BusManager
 client = BusManager('APIKEY')
 fav_timings = client.get_bus_arrival(12345,[3,68])
 print(fav_timings)
